@@ -1,19 +1,20 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
+import ReactDOM from 'react-dom'
 
 class Button extends Component {
-	state = { liked: false };
+	state = { liked: false }
 
 	render() {
 		if (this.state.liked) {
-			return 'You liked this.';
+			return 'You liked this.'
 		}
 
 		return (
-			<button className="btn btn-primary btn-lg" onClick={() => this.setState({ liked: true })}>
+			<button className='btn btn-primary btn-lg' onClick={() => this.setState({ liked: true })}>
 				View More Recipes
 			</button>
-		);
+		)
 	}
 }
 
-export default Button;
+ReactDOM.render(<Button />, document.getElementById('button'))
